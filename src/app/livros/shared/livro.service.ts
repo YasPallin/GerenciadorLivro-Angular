@@ -6,8 +6,16 @@ export class LivroService {
 
   constructor() { }
 
-  listarTodos(): Livro []{  //esse Livros vem do model
-    const livros = localStorage['livros']
-    return livros ? JSON.parse(livros) : [];
+  listarTodos(): Livro[]{ //vem de model
+    const livros = localStorage['livros'] 
+    return livros ? JSON.parse(livros): []; 
+  }
+
+  cadastrar(livro: Livro):void{  
+    const livros = this.listarTodos();
+    livro.id = new Date().getTime();
+	console.log(livros)
+    livros.push(livro);
+    localStorage['livros'] = JSON.stringify(livros)
   }
 }

@@ -4,23 +4,27 @@
   <tbody>
     <tr>
       <th>Livro</th>
+	  <th>Autor</th>
+      <th>Editora</th>
+	  <th>Lido</th>
+
       <th class="text-center">
-        <a class="btn btn-xs btn-success">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo
-        </a>
+		<a class="btn btn-xs btn-success" [routerLink] = "['/livros/cadastrar']">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo
+		</a>
       </th>
     </tr>
     <!-- Pra cada tarefa o  este bloco sera repetido -->
     <tr *ngFor="let livro of livros">
       <!-- Esta td mudara de cor caso tenha tarefa -->
-	  <td>
-        {{ livro.id }}
-      </td>
       <td>
         {{ livro.titulo }}
       </td>
       <td>
         {{ livro.autor }}
+      </td>
+	  <td>
+        {{ livro.editora }}
       </td>
 
       <td style="width: 70px" class="text-center">

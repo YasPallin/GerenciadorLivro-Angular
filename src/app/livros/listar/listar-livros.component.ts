@@ -13,11 +13,7 @@ export class ListarLivrosComponent implements OnInit {
 
   ngOnInit(): void {
 	  this.livros = this.listarTodos();
-	  this.livros = [
-		new Livro(1, "It, A Coisa", "Stephen King", false),
-		new Livro(2, "Desespero", "Stephen King", false),
-		new Livro(3, "Carrie, A Estranha", "Stephen King", false)
-	  ]
+
   }
   listarTodos(): Livro []{
 	  return this.livroService.listarTodos();

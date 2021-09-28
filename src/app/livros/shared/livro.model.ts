@@ -3,7 +3,7 @@ export class Livro{
         public id?:number,
         public titulo?:string,
 		public autor?: string,
-        public lido?:boolean
+        public editora?: string
     ) {
 
     }
